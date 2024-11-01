@@ -1,0 +1,54 @@
+$wpbq-background: #f8f8f8 !default;
+$wpbq-border: 1px solid #ccc !default;
+$wpbq-margin: 24px 0 !default;
+$wpbq-padding: 24px 24px 24px 48px !default;
+$wpbq-cite-color: #aaa !default;
+$wpbq-cite-font-size: 0.8em !default;
+$wpbq-color: #4d4d4d !default;
+$wpbq-quote-color: #ccc !default;
+$wpbq-quote-position: 16px !default;
+$wpbq-radius: 3px !default;
+
+.wpbq{
+
+  position: relative;
+  background: $wpbq-background;
+  margin: $wpbq-margin;
+  padding: $wpbq-padding;
+  border: $wpbq-border;
+  border-radius: $wpbq-radius;
+
+  &__content {
+    font-style: normal;
+    color: $wpbq-color;
+
+    &::before {
+      content: '\0201C';
+      color: #999;
+      font-size: 60px;
+      font-family: sans-serif;
+      position: absolute;
+      left: 16px;
+      top: 20px;
+      line-height: 1;
+    }
+  }
+
+  &__cite {
+
+    color: $wpbq-cite-color;
+    display: block;
+    font-size: $wpbq-cite-font-size;
+    margin-top: 24px;
+    margin-bottom: 0;
+
+    &__cite {
+      font-style: oblique;
+      font-weight: normal;
+    }
+
+    // &__a {
+    //   color: $wpbq-cite-color;
+    // }
+  }
+}
